@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.height {
+   min-height: calc(100vh - 120px);
+}
+
+body {
+    font-family: 'Electrolize';
+    font-size: 16px;
+}
