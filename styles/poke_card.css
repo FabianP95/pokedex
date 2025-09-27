@@ -1,0 +1,29 @@
+.font {
+    font-family: "Tiny5";
+    font-size: 28px;
+}
+
+.card_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poke_card {
+    max-height: 300px;
+    height: 150px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: min(10px, 2%);
+}
+
+.information_body {
+    padding: min(10px, 4%);
+}
+

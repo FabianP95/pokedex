@@ -1,0 +1,16 @@
+header>img {
+    width: clamp(80px, 10%, 100px);
+    height: auto;
+    padding-left: 10px;
+}
+
+.position_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poke_img {
+    height: 128px;
+    width: 128px;
+}

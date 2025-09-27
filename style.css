@@ -1,0 +1,46 @@
+header {
+    height: 120px;
+    background-color: #0061a8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.color {
+    background-color: #e41f25;
+}
+
+.color:hover {
+    background-color: rgb(228, 31, 37, 0.9);
+}
+
+.search_field {
+    padding-right: 10px;
+    width: clamp(180px, 40%,  300px);
+}
+
+.border {
+    border: none;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    height: 120px;
+    background-color: #750a00;
+}

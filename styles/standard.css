@@ -1,17 +1,24 @@
-*{
+* {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-a{
+
+a {
     text-decoration: none;
-    color: black;
 }
 
 .height {
-   min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px);
 }
 
 body {
-    font-family: 'Electrolize';
-    font-size: 16px;
+    font-family: "Electrolize";
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 }
+
+
+
