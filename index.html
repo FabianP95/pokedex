@@ -17,11 +17,12 @@
     <link rel="stylesheet" href="styles/assets.css">
     <link rel="stylesheet" href="style.css">
 
+    <script src="./scripts/storage.js"></script>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/render.js"></script>
 </head>
 
-<body>
+<body onload="fetchPokemon()">
     <div class="height">
         <header>
             <img src="./assets/img/pokemon-1536849_1280.png" alt="pokeball">
@@ -33,17 +34,8 @@
             </div>
         </header>
         <main>
-            <h1>A pokedex</h1>
-            <div class="poke_card">
-                <div class="position_img">
-                    <img id="poke_img" src="./assets/img/pokemon-1536849_1280.png"
-                        class="img-fluid rounded-start poke_img" alt="img of the pokemon">
-                </div>
-                <div class="information_body">
-                    <h5 id="poke_name" class="font">Card title</h5>
-                    <p id="poke_type" class="card-text card_line">Type <span id="poke_id">ID</span></p>
-                    <p id="poke_type" class="card-text">Type </p>
-                </div>
+            <h1 data-content="A Pokedex">A Pokedex</h1>
+            <div id="poke_collection">
             </div>
         </main>
         <dialog></dialog>
@@ -51,7 +43,7 @@
 
     <footer></footer>
     <script src="script.js" defer></script>
-    <script src="scripts/singleCard.js" defer></script>
+    
 </body>
 
 </html>
