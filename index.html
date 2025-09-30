@@ -22,6 +22,9 @@
     <script src="./scripts/render.js"></script>
 </head>
 
+<!-- switch case to determine background color by type // 
+ Style issues: h1 in yellow + blue like "pokemon", reworking small cards -> font color more readable-->
+
 <body onload="fetchPokemon()">
     <div class="height">
         <header>
@@ -34,16 +37,18 @@
             </div>
         </header>
         <main>
-            <h1 data-content="A Pokedex">A Pokedex</h1>
-            <div id="poke_collection">
+            <h1 onclick="closeSingleCard()" data-content="A Pokedex">A Pokedex</h1>
+            <div id="poke_collection" class="content_wrapper">
             </div>
         </main>
-        <dialog></dialog>
-    </div>
+        <dialog id="single_card" class="dialogWindow">
+            <div class="dialog_content"></div>
 
+        </dialog>
+    </div>
     <footer></footer>
+    <script src="./scripts/singleCard.js" defer></script>
     <script src="script.js" defer></script>
-    
 </body>
 
 </html>

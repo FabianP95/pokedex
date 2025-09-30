@@ -1,0 +1,22 @@
+dialog[open] {
+    display: flex;
+}
+
+.dialogWindow {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(247, 246, 246, 0.2);  /* liquid class conzept? */
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.single_card_display {
+    
+}
