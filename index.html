@@ -23,9 +23,13 @@
 </head>
 
 <!-- switch case to determine background color by type // 
- Style issues: h1 in yellow + blue like "pokemon", reworking small cards -> font color more readable-->
+ load function n give n to load more button and use n as point in index
+ Style issues: h1 in yellow + blue like "pokemon", reworking small cards 
+ -> font color more readable -> link font color to type as well
+ //  onclick search window border // hover effect on small cards
+ // single card style like a pokemon trading card-->
 
-<body onload="fetchPokemon()">
+<body onload="fetchPokemon(9)">
     <div class="height">
         <header>
             <img src="./assets/img/pokemon-1536849_1280.png" alt="pokeball">
@@ -41,9 +45,11 @@
             <div id="poke_collection" class="content_wrapper">
             </div>
         </main>
-        <dialog id="single_card" class="dialogWindow">
-            <div class="dialog_content"></div>
+        
+        <dialog id="dialog" class="dialogWindow">
+            <div class="single_card_display" id="single_card">
 
+            </div>
         </dialog>
     </div>
     <footer></footer>

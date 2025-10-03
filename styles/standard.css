@@ -5,6 +5,7 @@
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 .height {
@@ -20,5 +21,10 @@ body {
     margin-bottom: 0;
 }
 
-
+.divider{
+    height: 1px;
+    background-color: black;
+    width: 99%;
+    margin: 5px;
+}
 

@@ -8,12 +8,8 @@ function renderSmallCard(pokemonName, pokemon) {
     }
 };
 
-function renderDialog() {
-     let singleCard = document.getElementById('single_card');
-     singleCard.innerHTML = getDialog();
-};
-
 function renderSinglePokemon() {
-
+    let singleCard = document.getElementById('single_card');
+    singleCard.innerHTML = getSingleCard();
 };
 

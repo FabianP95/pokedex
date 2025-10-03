@@ -18,5 +18,82 @@ dialog[open] {
 }
 
 .single_card_display {
-    
+    position: relative;
+    margin: auto;
+    background-color: rgb(55, 91, 164);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 10px solid #f7c505;
+    padding: 30px;
+    max-height: 60%;
+    width: 60%;
+    max-width: 800px;
+    border-radius: 20px;
 }
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.single_pokemon_btn {
+    background: none;
+    border: none;
+    padding: 0;  
+}
+
+#btn_forward {
+    position: absolute;
+    top: 50%;
+    right: -52px;
+}
+
+#btn_backward {
+    position: absolute;
+    top: 50%;
+    left: -42px;
+}
+
+#close_btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.big {
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+.single_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10px;
+}
+
+.single_types{
+    display: flex;
+    gap: 20px;
+}
+
+.single_pic_display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    width: 90%;
+    border: 10px solid #f7c505;
+}
+
+.nav_line{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    color: #f7c505;
+}
+

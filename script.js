@@ -1,11 +1,11 @@
-let singleCard = document.getElementById('single_card');
+let dialog = document.getElementById('dialog');
 
 function openSingleCard() {
-    singleCard.show();
+    dialog.show();
 };
 
 window.onclick = function (event) {
-    if (event.target == singleCard) {
-        singleCard.close();
+    if (event.target == dialog) {
+        dialog.close();
     }
 };

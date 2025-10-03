@@ -26,3 +26,17 @@ header>img {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.btn_svg {
+    height: 50px;
+    width: 50px;
+}
+
+#single_pokemon_pic {
+    height: auto;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

@@ -14,7 +14,7 @@ async function fetchSinglePokemonData(pokemonName, pokeUrl) {
     let pokemon = await response.json();
     
     
-    
+    renderSinglePokemon();
 };
 
 // Infos 1st page: name, id, cry button , types
