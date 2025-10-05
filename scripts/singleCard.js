@@ -1,39 +1,66 @@
-
-async function showSinglePokemon(n) {
-    let currentPokemon = n -1;
-    let response = await fetch(Base_Url);
-    let responseJson = await response.json();
-    let pokemonName = responseJson.results[currentPokemon].name; 
-    let pokeUrl = responseJson.results[currentPokemon].url;
-fetchSinglePokemonData(pokemonName, pokeUrl);
-    openSingleCard();
+function closeSingleCard() {
+    dialog.close();
 };
 
-async function fetchSinglePokemonData(pokemonName, pokeUrl) {
-    let response = await fetch(pokeUrl);
-    let pokemon = await response.json();
-    
-    
-    renderSinglePokemon();
+function nextPokemon(n) {
+    n++;
+    showSinglePokemon(n)
 };
 
-// Infos 1st page: name, id, cry button , types
-// second page: height, weight, evolution chain pics
-// third page: base stats (6x)
+function previousPokemon(n) {
+    n--;
+    showSinglePokemon(n)
+};
+
+function checkBtns(n) {
+    hideBackBtn(n);
+    hideForwardBtn(n);
+};
+
+function hideBackBtn(n) {
+    let btnBack = document.getElementById('btn_backward');
+    switch (true) {
+        case n === 1:
+            btnBack.classList.add('d_none');
+            break;
+        default:
+            btnBack.classList.remove('d_none');
+            break;
+    }
+};
+
+function hideForwardBtn(n) {
+    let btnForward = document.getElementById('btn_forward');
+    switch (true) {
+        case n === 9:
+            btnForward.classList.add('d_none');
+            break;
+        default:
+            btnForward.classList.remove('d_none');
+            break;
+    }
+};
+
+function playCry(cry) {
+    let cryAudio = new Audio(cry);
+    cryAudio.play();
+};
+
+function showAbout() {
+    let about = document.getElementById('about');
+    let stats = document.getElementById('stats');
+    stats.classList.add('d_none');
+    about.classList.remove('d_none');
+};
+
+function showStats() {
+    let about = document.getElementById('about');
+    let stats = document.getElementById('stats');
+    stats.classList.remove('d_none');
+    about.classList.add('d_none');
+};
 
 
-    //let response = await fetch(Base_Url + pokemonName);
-    //let pokemon = await response.json();
-    //let id = pokemon.id; 
-    //let types = pokemon.types[0].type.name; 
-    //let imgSrc = pokemon.sprites.front_default;
-    //let cry = pokemon.cries.legacy;
-    //let height = pokemon.height;
-    //let weight = pokemon.weight;
-    //let statName = pokemon.stats[0].base_stat; //for loop for all stats
-    //let statValue = pokemon.stats[0].stat.name;
-    //let color_Url = pokemon.species.url;
-    //let pic = document.getElementById('pokePic');
-    //pic.src = imgSrc;
-    //let cryAudio = new Audio(cry);
-    //cryAudio.play();
+
+
+

@@ -28,3 +28,7 @@ body {
     margin: 5px;
 }
 
+.d_none {
+    display: none;
+}
+

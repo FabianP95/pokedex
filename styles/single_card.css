@@ -11,10 +11,17 @@ dialog[open] {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(247, 246, 246, 0.2);  /* liquid class conzept? */
+    background-color: rgba(80, 77, 77, 0.8);
+    /* liquid class conzept? */
     border: none;
     padding-left: 0;
     padding-right: 0;
+}
+
+.single_dialog_window {
+    margin: auto;
+    width: 60%;
+    max-width: 800px;
 }
 
 .single_card_display {
@@ -30,9 +37,10 @@ dialog[open] {
     width: 60%;
     max-width: 800px;
     border-radius: 20px;
+    color: #dddcdc;
 }
 
-.center{
+.center {
     display: flex;
     justify-content: center;
 }
@@ -40,7 +48,7 @@ dialog[open] {
 .single_pokemon_btn {
     background: none;
     border: none;
-    padding: 0;  
+    padding: 0;
 }
 
 #btn_forward {
@@ -55,7 +63,7 @@ dialog[open] {
     left: -42px;
 }
 
-#close_btn{
+#close_btn {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -66,7 +74,7 @@ dialog[open] {
     margin-top: 20px;
 }
 
-.single_header{
+.single_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -75,7 +83,7 @@ dialog[open] {
     margin-bottom: 10px;
 }
 
-.single_types{
+.single_types {
     display: flex;
     gap: 20px;
 }
@@ -90,10 +98,13 @@ dialog[open] {
     border: 10px solid #f7c505;
 }
 
-.nav_line{
+.nav_line {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
     color: #f7c505;
 }
 
+.stat_display {
+    
+}
