@@ -18,7 +18,7 @@ function getTypeHTML(type) {
    return `  <p class="card-text card_line">${type}</p>`
 };
 
-function getSingleCard(pokemon, pokemonName, n, cry) {
+function getSingleCard(pokemon, pokemonName, n) {
     return `<div class="single_card_display">
               <div>
                 <section class="single_header">
@@ -34,10 +34,8 @@ function getSingleCard(pokemon, pokemonName, n, cry) {
               </div>
               <section class="single_types" id="single_type">
               </section>
-              <div class="center">
-                <div class="single_pic_display" id="single_img">
-                    <img id="single_pokemon_pic" src="${pokemon.sprites.front_default}">
-                </div>
+              <div class="single_pic_display" id="single_img${pokemon.id}">
+                  <img id="single_pokemon_pic" src="${pokemon.sprites.front_default}">
               </div>
               <nav class="nav_line">
                 <section onclick="showAbout()"><a href="#">About</a></section>
@@ -47,14 +45,14 @@ function getSingleCard(pokemon, pokemonName, n, cry) {
               <section id="about">
                 
               </section>
-              <section id="stats" class="d_none">
+              <section id="stats" class="d_none stat_display">
                 
               </section>
            </div>`
 };
 
 function getSingleTypeHTML(type) {
-   return `  <p>${type}</p>`
+   return `  <p id="${type}" class="display_type">${type}</p>`
 };
 
 
@@ -67,9 +65,9 @@ function getAbout(weight, height, cry) {
     
 };
 
-function getStats(statName, statValue) {
+function getStats(statValue, statName) {
     return `
-              <div>
+              <div class="single_stat">
                 <p>${statName}: ${statValue}</p>
                 <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="${statValue}" aria-valuemin="0"
                     aria-valuemax="100">

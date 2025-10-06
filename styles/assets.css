@@ -35,8 +35,4 @@ header>img {
 #single_pokemon_pic {
     height: auto;
     width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
 }

@@ -1,6 +1,7 @@
 .font {
     font-family: "Tiny5";
     font-size: 28px;
+    font-weight: 600;
 }
 
 .card_line {
@@ -27,8 +28,13 @@
     color: #dddcdc;
 }
 
+.poke_card:hover{
+    cursor: pointer;
+}
+
 .information_body {
     width: 50%;
+    height: 100px;
 }
 
 .poke_id_pos {

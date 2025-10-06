@@ -30,12 +30,12 @@ dialog[open] {
     background-color: rgb(55, 91, 164);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border: 10px solid #f7c505;
     padding: 30px;
-    max-height: 60%;
+    height: 850px;
+    max-height: 80%;
     width: 60%;
-    max-width: 800px;
+    max-width: 550px;
     border-radius: 20px;
     color: #dddcdc;
 }
@@ -88,23 +88,40 @@ dialog[open] {
     gap: 20px;
 }
 
+.display_type{
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: white;
+    padding: 6px;
+    width: 68px;
+    display: flex;
+    justify-content: center;
+    
+}
+
 .single_pic_display {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    padding: 10px;
-    width: 90%;
+    width: 80%;
     border: 10px solid #f7c505;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav_line {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
     color: #f7c505;
+    
 }
 
 .stat_display {
+    
+}
+
+.single_stat{
+    
+    
     
 }

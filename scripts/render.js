@@ -15,21 +15,24 @@ function renderSinglePokemon(pokemon, pokemonName, n) {
     for (let i = 0; i < pokemon.types.length; i++) {
         let type = pokemon.types[i].type.name;
         typeDisplay.innerHTML += getSingleTypeHTML(type);
+        fetchBackgroundColor(type);
     }
     renderAllAdditionalInfo(pokemon);
 };
 
-function fetchSingleColorByType(type) {
-    let imgBackground = document.getElementById('single_img');
+function fetchSingleColorByType(type, id) {
+    let imgBackground = document.getElementById('single_img'+id);
     let color = colours[type];
     imgBackground.style.backgroundColor = color;
 };
+
 
 function fetchColorByType(type, id) {
     let card = document.getElementById('poke_card' + id);
     let color = colours[type];
     card.style.backgroundColor = color;
 };
+
 
 function renderAbout(pokemon) {
     let weight = pokemon.weight;
@@ -45,8 +48,9 @@ function renderStats(pokemon) {
         let statName = pokemon.stats[i].stat.name;
         let statValue = pokemon.stats[i].base_stat;
         content.innerHTML += getStats(statValue, statName);
-        displayStatBar(statValue); //problem here
-        console.log(statValue);
+        
+        
+        //displayStatBar(statValue); //problem here
     }
     
     
@@ -60,3 +64,9 @@ function renderAllAdditionalInfo(pokemon) {
 function displayStatBar(statValue) {
     document.getElementById('progress_bar'+ statValue).style.width = `${statValue}%`;
 };
+
+function fetchBackgroundColor(type) {
+    let card = document.getElementById(type);
+    let color = colours[type];
+    card.style.backgroundColor = color;
+}

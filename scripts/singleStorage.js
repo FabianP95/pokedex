@@ -12,7 +12,8 @@ async function fetchSinglePokemonData(pokemonName, pokeUrl, n) {
     let response = await fetch(pokeUrl);
     let pokemon = await response.json();
     let type = pokemon.types[0].type.name;
+    let id = pokemon.id;
     renderSinglePokemon(pokemon, pokemonName, n);
-    fetchSingleColorByType(type);
+    fetchSingleColorByType(type, id);
     checkBtns(n);
 };
