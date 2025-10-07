@@ -6,6 +6,7 @@ async function showSinglePokemon(n) {
     let pokeUrl = responseJson.results[currentPokemon].url;
     fetchSinglePokemonData(pokemonName, pokeUrl, n);
     openSingleCard();
+    noScroll();
 };
 
 async function fetchSinglePokemonData(pokemonName, pokeUrl, n) {

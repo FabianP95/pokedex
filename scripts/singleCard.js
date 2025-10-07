@@ -1,5 +1,6 @@
 function closeSingleCard() {
     dialog.close();
+    scroll();
 };
 
 function nextPokemon(n) {
@@ -60,7 +61,17 @@ function showStats() {
     about.classList.add('d_none');
 };
 
+function noScroll() {
+    let dialog = document.getElementById('dialog');
+    let body = document.getElementById('body');
+    if (dialog.open) {
+        body.style.overflow = 'hidden';
+    }
+};
 
-
+function scroll() {
+    let body = document.getElementById('body');
+    body.style.overflow = 'auto';
+}
 
 

@@ -7,5 +7,6 @@ function openSingleCard() {
 window.onclick = function (event) {
     if (event.target == dialog) {
         dialog.close();
+        scroll();
     }
 };
