@@ -7,7 +7,7 @@ function getSmallCard(pokemonName, pokemon) {
                         class="img-fluid rounded-start poke_img" alt="img of the pokemon">
                 </div>
                 <div class="information_body">
-                    <h5 id="poke_name" class="font">${pokemonName.charAt(0).toUpperCase()+pokemonName.slice(1)}</h5>
+                    <h5 id="poke_name" class="font pokemon_name">${pokemonName.charAt(0).toUpperCase()+pokemonName.slice(1)}</h5>
                     <div id="poke_type${pokemon.id}">   
                     </div>
                 </div>

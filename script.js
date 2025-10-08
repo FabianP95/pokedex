@@ -10,3 +10,18 @@ window.onclick = function (event) {
         scroll();
     }
 };
+
+function searchPokemon() {
+    let search = document.getElementById('search');
+    let name = document.getElementsByClassName('pokemon_name');
+    for (let i = 0; i < name.length; i++) {
+        let realName = name[i].innerText;
+        if (realName == search.value) {
+            name[i].classList.add('d_none'); //parent element bekommen
+            
+        }
+    }
+    
+    
+    
+}

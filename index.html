@@ -25,18 +25,15 @@
 <!-- 
  load function n give n to load more button and use n as point in index
  // search filter functionality
- //  onclick search window border
  // single card style like a pokemon trading card//-->
 
 <body id="body" onload="fetchPokemon(9)">
     <div class="height">
         <header>
             <img src="./assets/img/pokemon-1536849_1280.png" alt="pokeball">
-            <div class="input-group search_field">
-                <input type="text" class="form-control border" placeholder="Search..."
-                    aria-label="Example text with button addon" aria-describedby="search_button">
-                <button class="btn color" type="button" id="search_button"><img class="color_search"
-                        src="./assets/icons/search.svg" alt="search"></button>
+            <div  class="input-group search_field">
+                <input id="search" onkeyup="searchPokemon()" type="text" class="form-control " placeholder="Search..." minlength="4"
+                    aria-label="Example text">
             </div>
         </header>
         <main>

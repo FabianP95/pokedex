@@ -30,6 +30,8 @@
 .poke_card:hover{
     cursor: pointer;
     padding: 0;
+    transition: 1s ease;
+    transform: scale(1.05);
 }
 
 .information_body {

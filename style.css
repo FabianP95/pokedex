@@ -19,6 +19,11 @@ header {
     width: clamp(180px, 40%, 300px);
 }
 
+.form-control:focus {
+    box-shadow: none;
+    border: 3px solid #750a00;
+}
+
 .border {
     border: none;
 }
@@ -30,18 +35,18 @@ h1 {
     color: #0061a8;
 }
 
-h1::before{
-  content: attr(data-content);
-  position:absolute;
-  top:7px; 
-  left:0;
-  width: 100%;
-  height: 100%;
-  overflow:hidden;
-  color:#750a00;
+h1::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #750a00;
 }
 
-.content_wrapper{
+.content_wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
