@@ -69,4 +69,5 @@ function fetchBackgroundColor(type) {
     let card = document.getElementById(type);
     let color = colours[type];
     card.style.backgroundColor = color;
-}
+};
+

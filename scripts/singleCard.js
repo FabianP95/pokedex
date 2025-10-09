@@ -72,6 +72,6 @@ function noScroll() {
 function scroll() {
     let body = document.getElementById('body');
     body.style.overflow = 'auto';
-}
+};
 
 

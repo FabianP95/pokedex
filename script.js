@@ -18,10 +18,13 @@ function searchPokemon() {
         let realName = name[i].innerText;
         if (realName == search.value) {
             name[i].classList.add('d_none'); //parent element bekommen
-            
         }
     }
-    
-    
-    
-}
+};
+
+function renderMore(add) {
+    let currentAmount = document.getElementsByClassName('pokemon_name');
+    let newStart = currentAmount.length;
+    let newEnd = newStart + add;
+    useMore(newStart, newEnd);
+};

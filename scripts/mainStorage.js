@@ -19,28 +19,49 @@ const colours = {
 	dark: '#705746',
 	steel: '#B7B7CE',
 	fairy: '#D685AD',
-    stellar: '#054e11ff',
-    unkown: '#476866ff'
+	stellar: '#054e11ff',
+	unkown: '#476866ff'
 };
 
-async function fetchPokemon(n) {
-    let response = await fetch(Base_Url);
-    let responseJson = await response.json();
-    for (let i = 0; i < n; i++) {
-        let pokemonName = responseJson.results[i].name; 
-        let pokeUrl = responseJson.results[i].url; 
-        fetchPokemonData(pokemonName, pokeUrl);
-    };
+function getData() {
+	return new Promise(() => {
+		setTimeout(() => {
+			fetchPokemon(0, 9);
+		}, 1000); 
+	});
+};
+
+async function useData() {
+	 await getData();
+};
+
+async function fetchPokemon(start, end) {
+	let response = await fetch(Base_Url);
+	let responseJson = await response.json();
+	for (let i = start; i < end; i++) {
+		let pokemonName = responseJson.results[i].name;
+		let pokeUrl = responseJson.results[i].url;
+		fetchPokemonData(pokemonName, pokeUrl);
+	};
 };
 
 async function fetchPokemonData(pokemonName, pokeUrl) {
-    let response = await fetch(pokeUrl);
-    let pokemon = await response.json();
-    let type = pokemon.types[0].type.name;
-    let id = pokemon.id;
-    renderSmallCard(pokemonName, pokemon);
-    fetchColorByType(type, id);  
+	let response = await fetch(pokeUrl);
+	let pokemon = await response.json();
+	let type = pokemon.types[0].type.name;
+	let id = pokemon.id;
+	renderSmallCard(pokemonName, pokemon);
+	fetchColorByType(type, id);
 };
 
+function getMore(newStart, newEnd) {
+	return new Promise(() => {
+		setTimeout(() => {
+			fetchPokemon(newStart, newEnd);
+		}, 1000); 
+	});
+};
 
-
+async function useMore(newStart, newEnd) {
+	 await getMore(newStart, newEnd);
+};

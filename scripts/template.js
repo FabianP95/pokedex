@@ -1,28 +1,28 @@
 function getSmallCard(pokemonName, pokemon) {
-    return ` <div onclick = "showSinglePokemon(${pokemon.id})" id="poke_card${pokemon.id}" class="poke_card">
-                <span class="poke_id_pos" id="poke_id">${"#" + pokemon.id}</span>
-                <img class="background_image" src="./assets/img/pokemon-1536849_1280.png" alt="pokeball">
+  return ` <div onclick = "showSinglePokemon(${pokemon.id})" id="poke_card${pokemon.id}" class="poke_card">
+                <p class="poke_id_pos" id="poke_id">${"#" + pokemon.id}</p>
                 <div class="position_img">
                     <img id="poke_img" src="${pokemon.sprites.front_default}"
                         class="img-fluid rounded-start poke_img" alt="img of the pokemon">
                 </div>
                 <div class="information_body">
-                    <h5 id="poke_name" class="font pokemon_name">${pokemonName.charAt(0).toUpperCase()+pokemonName.slice(1)}</h5>
+                    <h5 id="poke_name" class="font pokemon_name">${pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}</h5>
                     <div id="poke_type${pokemon.id}">   
                     </div>
                 </div>
+                <span></span>
             </div>`
 };
 
 function getTypeHTML(type) {
-   return `  <p class="card-text card_line">${type}</p>`
+  return `  <p class="card-text card_line">${type}</p>`
 };
 
 function getSingleCard(pokemon, pokemonName, n) {
-    return `<div class="single_card_display">
+  return `<div class="single_card_display">
               <div>
                 <section class="single_header">
-                    <h2 class="font big">${pokemonName.charAt(0).toUpperCase()+pokemonName.slice(1)}</h2>
+                    <h2 class="font big">${pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}</h2>
                     <span class="font big">${"#" + pokemon.id}</span>
                     <button onclick=" closeSingleCard()" id="close_btn" class="single_pokemon_btn"><img class="btn_svg"
                             src="./assets/icons/navigation/close.svg" alt="close"></button>
@@ -52,21 +52,21 @@ function getSingleCard(pokemon, pokemonName, n) {
 };
 
 function getSingleTypeHTML(type) {
-   return `  <p id="${type}" class="display_type">${type}</p>`
+  return `  <p id="${type}" class="display_type">${type}</p>`
 };
 
 
 function getAbout(weight, height, cry) {
-    return `<div id="about">
-              <p>weight: ${weight/10}kg</p>
-              <p>height: ${height/10}m</p>
+  return `<div id="about">
+              <p>weight: ${weight / 10}kg</p>
+              <p>height: ${height / 10}m</p>
               <button onclick="playCry('${cry}')">Make Noise</button>
             </div>`
-    
+
 };
 
 function getStats(statValue, statName) {
-    return `
+  return `
               <div class="single_stat">
                 <p>${statName}: ${statValue}</p>
                 <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="${statValue}" aria-valuemin="0"
