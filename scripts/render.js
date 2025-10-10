@@ -32,7 +32,6 @@ function fetchSingleColorByType(type, id) {
     imgBackground.style.backgroundColor = color;
 };
 
-
 function fetchColorByType(type, id) {
     let card = document.getElementById('poke_card' + id);
     let color = colours[type];

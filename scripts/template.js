@@ -58,7 +58,6 @@ function getAbout(weight, height, cry) {
             <p>height: ${height / 10}m</p>
             <button onclick="playCry('${cry}')">Make Noise</button>
           `
-
 };
 
 function getStats(statValue, statName) {

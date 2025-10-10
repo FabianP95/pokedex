@@ -90,7 +90,6 @@ dialog[open] {
     width: 68px;
     display: flex;
     justify-content: center;
-
 }
 
 .single_pic_display {
@@ -109,7 +108,6 @@ dialog[open] {
     display: flex;
     justify-content: space-around;
     margin-bottom: 5px;
-
 }
 
 .about_display {
@@ -118,7 +116,6 @@ dialog[open] {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
 }
 
 .stat_display {
@@ -140,5 +137,4 @@ dialog[open] {
     height: 10px;
     background-color: #f7c505;
     border-radius: 5px;
-
 }
