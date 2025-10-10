@@ -13,24 +13,23 @@ dialog[open] {
     backdrop-filter: blur(2px);
 }
 
-.single_dialog_window {
-    margin: auto;
-    width: 60%;
-    max-width: 800px;
+.position_dialog {
+    position: relative;
+    left: 50%;
+    align-content: center;
+    translate: -50%;
 }
 
 .single_card_display {
-    position: relative;
     margin: auto;
-    background-color: rgb(55, 91, 164);
+    position: relative;
     display: flex;
     flex-direction: column;
-    border: 10px solid #f7c505;
-    padding: 30px;
-    height: 850px;
-    max-height: 80%;
-    width: 60%;
-    max-width: 550px;
+    background-color: #0061a8;
+    border: 5px solid #f7c505;
+    padding: 16px;
+    width: clamp(233px, 60vw, 600px);
+    height: min(900px, 98%);
     border-radius: 20px;
     color: #dddcdc;
 }
@@ -65,8 +64,7 @@ dialog[open] {
 }
 
 .big {
-    font-size: 35px;
-    margin-top: 20px;
+    font-size: clamp(25px, calc(3vw + 1rem), 35px)
 }
 
 .single_header {
@@ -75,7 +73,8 @@ dialog[open] {
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 32px;
 }
 
 .single_types {
@@ -83,7 +82,7 @@ dialog[open] {
     gap: 20px;
 }
 
-.display_type{
+.display_type {
     border: 1px solid;
     border-radius: 20px;
     border-color: white;
@@ -91,32 +90,55 @@ dialog[open] {
     width: 68px;
     display: flex;
     justify-content: center;
-    
+
 }
 
 .single_pic_display {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    border: 10px solid #f7c505;
+    width: 100%;
+    height: 280px;
+    border: 5px solid #f7c505;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .nav_line {
     display: flex;
     justify-content: space-around;
-    color: #f7c505;
-    
+    margin-bottom: 5px;
+
+}
+
+.about_display {
+    height: 185px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
 .stat_display {
-    
+    margin-top: 25px;
+    max-width: 80%;
 }
 
-.single_stat{
-    
-    
-    
+.single_stat {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3px;
+}
+
+.stat {
+    min-width: 180px;
+}
+
+.num_display {
+    height: 10px;
+    background-color: #f7c505;
+    border-radius: 5px;
+
 }

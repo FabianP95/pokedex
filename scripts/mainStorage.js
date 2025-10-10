@@ -1,5 +1,7 @@
 const Base_Url = "https://pokeapi.co/api/v2/pokemon?limit=1302&offset=0";
 
+let searchData = [];
+
 const colours = {
 	normal: '#A8A77A',
 	fire: '#EE8130',
@@ -23,16 +25,16 @@ const colours = {
 	unkown: '#476866ff'
 };
 
-function getData() {
+function getData(start, end) {
 	return new Promise(() => {
 		setTimeout(() => {
-			fetchPokemon(0, 9);
+			fetchPokemon(start, end);
 		}, 1000); 
 	});
 };
 
-async function useData() {
-	 await getData();
+async function useData(start, end) {
+	 await getData(start, end);
 };
 
 async function fetchPokemon(start, end) {
@@ -50,6 +52,7 @@ async function fetchPokemonData(pokemonName, pokeUrl) {
 	let pokemon = await response.json();
 	let type = pokemon.types[0].type.name;
 	let id = pokemon.id;
+	searchData.push(pokemonName);
 	renderSmallCard(pokemonName, pokemon);
 	fetchColorByType(type, id);
 };

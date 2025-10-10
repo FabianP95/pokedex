@@ -20,6 +20,12 @@ function renderSinglePokemon(pokemon, pokemonName, n) {
     renderAllAdditionalInfo(pokemon);
 };
 
+function fetchBackgroundColor(type) {
+    let card = document.getElementById(type);
+    let color = colours[type];
+    card.style.backgroundColor = color;
+};
+
 function fetchSingleColorByType(type, id) {
     let imgBackground = document.getElementById('single_img'+id);
     let color = colours[type];
@@ -33,6 +39,10 @@ function fetchColorByType(type, id) {
     card.style.backgroundColor = color;
 };
 
+function renderAllAdditionalInfo(pokemon) {
+    renderAbout(pokemon);
+    renderStats(pokemon);
+};
 
 function renderAbout(pokemon) {
     let weight = pokemon.weight;
@@ -44,30 +54,21 @@ function renderAbout(pokemon) {
 
 function renderStats(pokemon) {
     let content = document.getElementById('stats');
+    let type = pokemon.types[0].type.name;
     for (let i = 0; i < pokemon.stats.length; i++) {
         let statName = pokemon.stats[i].stat.name;
         let statValue = pokemon.stats[i].base_stat;
         content.innerHTML += getStats(statValue, statName);
-        
-        
-        //displayStatBar(statValue); //problem here
+        displayStatBar(statValue, statName, type);
     }
-    
-    
 };
 
-function renderAllAdditionalInfo(pokemon) {
-    renderAbout(pokemon);
-    renderStats(pokemon);
-};
-
-function displayStatBar(statValue) {
-    document.getElementById('progress_bar'+ statValue).style.width = `${statValue}%`;
-};
-
-function fetchBackgroundColor(type) {
-    let card = document.getElementById(type);
+function displayStatBar(statValue, statName, type) {
+    let bar =  document.getElementById(statName);
     let color = colours[type];
-    card.style.backgroundColor = color;
+    bar.style.width = `${statValue}%`;
+    bar.style.backgroundColor = color;
 };
+
+
 

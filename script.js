@@ -13,11 +13,23 @@ window.onclick = function (event) {
 
 function searchPokemon() {
     let search = document.getElementById('search');
-    let name = document.getElementsByClassName('pokemon_name');
-    for (let i = 0; i < name.length; i++) {
-        let realName = name[i].innerText;
-        if (realName == search.value) {
-            name[i].classList.add('d_none'); //parent element bekommen
+    let searchName = search.value.toLowerCase();
+    let collection = document.getElementsByClassName('poke_card');
+    if (searchData.includes(searchName)) {
+        for (let i = 0; i < collection.length; i++) {
+            collection[i].classList.add('d_none');
+            collection[searchData.indexOf(searchName)].classList.remove('d_none');
+        }
+    } 
+};
+
+function displayPokemon() {
+    let search = document.getElementById('search');
+    console.log(search.value.length);
+    let collection = document.getElementsByClassName('poke_card');
+    if (search.value.length == 0) {
+        for (let i = 0; i < collection.length; i++) {
+            collection[i].classList.remove('d_none');
         }
     }
 };

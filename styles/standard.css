@@ -23,9 +23,8 @@ body {
 
 .divider{
     height: 1px;
-    background-color: white;
-    width: 99%;
-    
+    background-color: #f7c505;
+    margin-bottom: 7px; 
 }
 
 .d_none {

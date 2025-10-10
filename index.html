@@ -23,23 +23,20 @@
 </head>
 
 <!-- 
- // search filter functionality
- // single card style like a pokemon trading card//
- //dialog window at position where viewer is not always at the start
- // add aria labels
- //stats not loading in correctly
- // responsiv-->
+// add aria labels
+ // loading spinner
+ -->
 
-<body id="body" onload="useData()">
+<body id="body" onload="useData(0,9)">
     <div class="height">
-        <button class="search_btn" onclick="renderMore(20)">
+        <button class="render_btn" onclick="renderMore(20)">
             <img class="search_pic" src="./assets/img/pokemon-1536849_1280.png" alt="pokeball">
         </button>
         <header>
-            <div class="input-group search_field">
-                <input id="search" onkeyup="searchPokemon()" type="text" class="form-control "
+            <form class="input-group search_field">
+                <input id="search" onkeyup="searchPokemon(), displayPokemon()" type="text" class="form-control "
                     placeholder="Search for Pokemon" minlength="4" aria-label="Example text">
-            </div>
+            </form>
         </header>
         <main>
             <h1 data-content="A Pokedex">A Pokedex</h1>
@@ -47,8 +44,7 @@
             </div>
         </main>
         <dialog id="dialog" class="dialogWindow">
-            <div class="single_dialog_window" id="single_card">
-            </div>
+            <div id="single_card" class="position_dialog"></div>
         </dialog>
     </div>
     <footer></footer>

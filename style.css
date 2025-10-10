@@ -58,7 +58,7 @@ h1::before {
     justify-content: center;
 }
 
-.search_btn {
+.render_btn {
     position: sticky;
     z-index: 2;
     top: 5px;
