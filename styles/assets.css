@@ -41,3 +41,9 @@ header>img {
     height: auto;
     width: 108px;
 }
+
+.spinner_img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}

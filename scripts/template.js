@@ -1,4 +1,4 @@
-function getSmallCard(pokemonName, pokemon) {
+function getSmallCard(pokemon) {
   return ` <article onclick = "showSinglePokemon(${pokemon.id})" id="poke_card${pokemon.id}" class="poke_card">
                 <p class="poke_id_pos" id="poke_id">${"#" + pokemon.id}</p>
                 <div class="position_img">
@@ -6,7 +6,7 @@ function getSmallCard(pokemonName, pokemon) {
                         class="img-fluid rounded-start poke_img" alt="img of the pokemon">
                 </div>
                 <section class="information_body">
-                    <h5 id="poke_name" class="font pokemon_name">${pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}</h5>
+                    <h5 id="poke_name" class="font pokemon_name">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h5>
                     <section id="poke_type${pokemon.id}">   
                     </section>
                 </section>
@@ -69,3 +69,8 @@ function getStats(statValue, statName) {
          </div>`
 };
 
+function getSpinner() {
+    return ` <div id="spinner" class="spinner">
+                <img class="spinner_img" src="./assets/img/loading_spinner.png" alt="bulbasaurus">
+              </div>`
+}

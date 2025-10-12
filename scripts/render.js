@@ -1,11 +1,32 @@
-function renderSmallCard(pokemonName, pokemon) {
+function render() {
+    mainContainer.innerHTML = "";
+    for (let i = 0; i < allPokeData.length; i++) {
+        renderSmallCards(allPokeData[i]);
+        let type = allPokeData[i].types[0].type.name;
+        let id = allPokeData[i].id
+        fetchColorByType(type, id);
+    }
+};
+
+function enableBtn() {
+    renderBtn.disabled = false;
+    renderBtn.classList.add('class_hover');
+};
+
+function renderSmallCards(pokemon) {
     let pokecard = document.getElementById('poke_collection');
-    pokecard.innerHTML += getSmallCard(pokemonName, pokemon);
+    pokecard.innerHTML += getSmallCard(pokemon);
     let typeDisplay = document.getElementById('poke_type' + pokemon.id);
     for (let i = 0; i < pokemon.types.length; i++) {
         let type = pokemon.types[i].type.name;
         typeDisplay.innerHTML += getTypeHTML(type);
     }
+};
+
+function fetchColorByType(type, id) {
+    let card = document.getElementById('poke_card' + id);
+    let color = colours[type];
+    card.style.backgroundColor = color;
 };
 
 function renderSinglePokemon(pokemon, pokemonName, n) {
@@ -27,17 +48,10 @@ function fetchBackgroundColor(type) {
 };
 
 function fetchSingleColorByType(type, id) {
-    let imgBackground = document.getElementById('single_img'+id);
+    let imgBackground = document.getElementById('single_img' + id);
     let color = colours[type];
     imgBackground.style.backgroundColor = color;
 };
-
-function fetchColorByType(type, id) {
-    let card = document.getElementById('poke_card' + id);
-    let color = colours[type];
-    card.style.backgroundColor = color;
-};
-
 function renderAllAdditionalInfo(pokemon) {
     renderAbout(pokemon);
     renderStats(pokemon);
@@ -63,11 +77,10 @@ function renderStats(pokemon) {
 };
 
 function displayStatBar(statValue, statName, type) {
-    let bar =  document.getElementById(statName);
+    let bar = document.getElementById(statName);
     let color = colours[type];
     bar.style.width = `${statValue}%`;
     bar.style.backgroundColor = color;
 };
-
 
 

@@ -33,7 +33,7 @@ function hideBackBtn(n) {
 function hideForwardBtn(n) {
     let btnForward = document.getElementById('btn_forward');
     switch (true) {
-        case n === 9:
+        case n === allPokeData.length:
             btnForward.classList.add('d_none');
             break;
         default:

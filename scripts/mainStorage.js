@@ -1,5 +1,7 @@
 const Base_Url = "https://pokeapi.co/api/v2/pokemon?limit=1302&offset=0";
 
+const allPokeData = [];
+
 let searchData = [];
 
 const colours = {
@@ -25,16 +27,23 @@ const colours = {
 	unkown: '#476866ff'
 };
 
-function getData(start, end) {
-	return new Promise(() => {
-		setTimeout(() => {
-			fetchPokemon(start, end);
-		}, 1000); 
-	});
+async function loadAll(start, end) {
+	try {
+		startSpinner();
+		await getData(start, end);
+		enableBtn();
+		render();
+	} catch (error) {
+		alert("Try loading again");
+	}
 };
 
-async function useData(start, end) {
-	 await getData(start, end);
+function getData(start, end) {    
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			 resolve(fetchPokemon(start, end));
+		}, 4000);
+	});
 };
 
 async function fetchPokemon(start, end) {
@@ -43,28 +52,26 @@ async function fetchPokemon(start, end) {
 	for (let i = start; i < end; i++) {
 		let pokemonName = responseJson.results[i].name;
 		let pokeUrl = responseJson.results[i].url;
-		fetchPokemonData(pokemonName, pokeUrl);
+		searchData.push(pokemonName);
+		await fetchPokemonData(pokemonName, pokeUrl);
 	};
 };
 
 async function fetchPokemonData(pokemonName, pokeUrl) {
 	let response = await fetch(pokeUrl);
 	let pokemon = await response.json();
-	let type = pokemon.types[0].type.name;
-	let id = pokemon.id;
-	searchData.push(pokemonName);
-	renderSmallCard(pokemonName, pokemon);
-	fetchColorByType(type, id);
+	allPokeData.push(pokemon);
 };
 
 function getMore(newStart, newEnd) {
-	return new Promise(() => {
+	return new Promise((resolve) => {
 		setTimeout(() => {
-			fetchPokemon(newStart, newEnd);
-		}, 1000); 
+			resolve(fetchPokemon(newStart, newEnd));
+		}, 2000);
 	});
 };
 
 async function useMore(newStart, newEnd) {
-	 await getMore(newStart, newEnd);
+	await getMore(newStart, newEnd);
+	render();
 };

@@ -1,4 +1,6 @@
 let dialog = document.getElementById('dialog');
+let mainContainer = document.getElementById('poke_collection');
+let renderBtn = document.getElementById('render_btn');
 
 function openSingleCard() {
     dialog.show();
@@ -20,7 +22,7 @@ function searchPokemon() {
             collection[i].classList.add('d_none');
             collection[searchData.indexOf(searchName)].classList.remove('d_none');
         }
-    } 
+    }
 };
 
 function displayPokemon() {
@@ -39,4 +41,8 @@ function renderMore(add) {
     let newStart = currentAmount.length;
     let newEnd = newStart + add;
     useMore(newStart, newEnd);
+};
+
+function startSpinner() {
+    mainContainer.innerHTML = getSpinner();
 };

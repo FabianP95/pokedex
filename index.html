@@ -23,13 +23,12 @@
 </head>
 
 <!-- 
-// add aria labels
- // loading spinner
+// add aria labels + check for accessability
  -->
 
-<body id="body" onload="useData(0,9)">
+<body id="body" onload="loadAll(0,20)">
     <div class="height">
-        <button class="render_btn" onclick="renderMore(20)">
+        <button id="render_btn" class="render_btn" onclick="renderMore(20)" disabled >
             <img class="search_pic" src="./assets/img/pokemon-1536849_1280.png" alt="pokeball">
         </button>
         <header>
@@ -41,6 +40,7 @@
         <main>
             <h1 data-content="A Pokedex">A Pokedex</h1>
             <div id="poke_collection" class="content_wrapper">
+                
             </div>
         </main>
         <dialog id="dialog" class="dialogWindow">

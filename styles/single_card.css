@@ -137,4 +137,5 @@ dialog[open] {
     height: 10px;
     background-color: #f7c505;
     border-radius: 5px;
+    border: 1px solid #f7c505;
 }

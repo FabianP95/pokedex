@@ -73,9 +73,18 @@ h1::before {
     }
 }
 
-.search_btn:hover {
+.class_hover:hover {
     animation-duration: 2s;
     animation-name: spin;
+}
+
+.spinner {
+    margin-top: 40px;
+    animation: infinite;
+    animation-duration: 1s;
+    animation-name: spin;
+    animation-timing-function: linear;
+    
 }
 
 footer {
