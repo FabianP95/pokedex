@@ -58,6 +58,21 @@ h1::before {
     justify-content: center;
 }
 
+.display_hint{
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #0061a8;
+    width: 20%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .render_btn {
     position: sticky;
     z-index: 2;
