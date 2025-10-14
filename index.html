@@ -23,7 +23,6 @@
 </head>
 
 <!-- 
-// add aria labels + check for accessability
  -->
 
 <body id="body" onload="loadAll(0,20)">
@@ -34,13 +33,12 @@
         <header>
             <form class="input-group search_field">
                 <input id="search" onkeyup="searchPokemon(), displayPokemon()" type="text" class="form-control "
-                    placeholder="Search for Pokemon" minlength="4" aria-label="Example text">
+                    placeholder="Search for Pokemon" minlength="3" aria-label="Example text">
             </form>
         </header>
         <main>
             <h1 data-content="A Pokedex">A Pokedex</h1>
             <div id="poke_collection" class="content_wrapper">
-                
             </div>
             <span class="display_hint">
                 For more Pokemon click on the Pokeball!

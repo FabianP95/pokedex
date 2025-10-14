@@ -8,11 +8,6 @@ function render() {
     }
 };
 
-function enableBtn() {
-    renderBtn.disabled = false;
-    renderBtn.classList.add('class_hover');
-};
-
 function renderSmallCards(pokemon) {
     let pokecard = document.getElementById('poke_collection');
     pokecard.innerHTML += getSmallCard(pokemon);
