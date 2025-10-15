@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles/assets.css">
     <link rel="stylesheet" href="style.css">
 
-    <script src="./scripts/mainStorage.js"></script>
+    <script src="./scripts/main_storage.js"></script>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/render.js"></script>
 </head>
@@ -27,16 +27,20 @@
 
 <body id="body" onload="loadAll(0,20)">
     <div class="height">
-        <button id="render_btn" class="render_btn" onclick="renderMore(20)" disabled >
-            <img class="search_pic" src="./assets/img/pokemon-1536849_1280.png" alt="pokeball">
-        </button>
         <header>
-            <form class="input-group search_field">
-                <input id="search" onkeyup="searchPokemon(), displayPokemon()" type="text" class="form-control "
-                    placeholder="Search for Pokemon" minlength="3" aria-label="Example text">
-            </form>
+            <div class="width_header">
+                <form class="input-group search_field">
+                    <input id="search" onkeyup="searchPokemon()" type="text" class="form-control " placeholder="Search for Pokemon"
+                        aria-label="Example text">
+                </form>
+                <button onclick="displayPokemon()" class="click_btn"><img src="./assets/icons/close.svg"
+                        alt="delete Icon"></button>
+            </div>
         </header>
-        <main>
+        <main class="width">
+            <button id="render_btn" class="render_btn" onclick="renderMore(20)" disabled>
+                <img class="search_pic" src="./assets/img/pokemon-1536849_1280.png" alt="pokeball">
+            </button>
             <h1 data-content="A Pokedex">A Pokedex</h1>
             <div id="poke_collection" class="content_wrapper">
             </div>
@@ -49,8 +53,8 @@
         </dialog>
     </div>
     <footer></footer>
-    <script src="./scripts/singleStorage.js" defer></script>
-    <script src="./scripts/singleCard.js" defer></script>
+    <script src="./scripts/single_storage.js" defer></script>
+    <script src="./scripts/single_card.js" defer></script>
     <script src="script.js" defer></script>
 </body>
 

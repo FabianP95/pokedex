@@ -1,6 +1,6 @@
 const Base_Url = "https://pokeapi.co/api/v2/pokemon?limit=1302&offset=0";
 
-const allPokeData = [];
+let allPokeData = [];
 
 let searchData = [];
 
@@ -67,7 +67,7 @@ function getMore(newStart, newEnd) {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(fetchPokemon(newStart, newEnd));
-		}, 2000);
+		}, 3500);
 	});
 };
 

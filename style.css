@@ -3,7 +3,6 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
-    max-width: 1920px;
     background-color: #0061a8;
     display: flex;
     justify-content:right;
@@ -22,6 +21,11 @@ header {
 .search_field {
     height: 40px;
     width: clamp(143px, 40%, 300px);
+}
+
+.click_btn{
+    background-color: #0061a8;
+    border: none;
 }
 
 .form-control:focus {
@@ -52,6 +56,21 @@ h1::before {
     color: #750a00;
 }
 
+.width {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.width_header {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1920px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .content_wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +97,7 @@ h1::before {
     top: 5px;
     left: 5px;
     border: none;
+     margin-left: auto;
     background-color: rgba(255, 255, 255, 0);
 }
 

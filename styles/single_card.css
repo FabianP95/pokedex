@@ -11,6 +11,7 @@ dialog[open] {
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
     backdrop-filter: blur(2px);
+    overflow: hidden;
 }
 
 .position_dialog {
